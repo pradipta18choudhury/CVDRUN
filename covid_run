@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+
+int main()
+{
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,k,x,y;
+        cin>>n>>k>>x>>y;
+        
+        bool temp[n];
+        memset(temp,0,sizeof(temp));
+        while(temp[x]!=1)
+        {
+            temp[x]=1;
+            x=(x+k)%n;
+        }
+        if(temp[y]==0)
+        cout<<"NO"<<endl;
+        else
+        cout<<"YES"<<endl;
+    }
+    return 0;
+    
+}
